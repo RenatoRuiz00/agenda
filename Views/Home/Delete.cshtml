@@ -1,0 +1,38 @@
+﻿@model Pessoa
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<h3>Você tem certeza que deseja deletar ?</h3>
+<hr />
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
+        <dd>@Html.DisplayFor(model => model.Nome)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Telefone)</dt>
+        <dd>@Html.DisplayFor(model => model.Telefone)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Logradouro)</dt>
+        <dd>@Html.DisplayFor(model => model.Logradouro)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Numero)</dt>
+        <dd>@Html.DisplayFor(model => model.Numero)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Bairro)</dt>
+        <dd>@Html.DisplayFor(model => model.Bairro)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Cidade)</dt>
+        <dd>@Html.DisplayFor(model => model.Cidade)</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
+
+

@@ -1,0 +1,64 @@
+﻿@model Pessoa
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+<hr />
+
+<div class="card" style="width:567px;">
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" value="@Model.Id" name="id" />
+            <div class="form-row">
+                <div class="col d-sm-flex align-items-sm-center">
+                    <label style="width: 84px;margin-right: 20px;">Nome</label>
+                    <input type="text" class="form-control" style="width: 424px;" required maxlength="50" name="nome" asp-for="Nome"/>
+                </div>
+            </div>
+
+            <div class="form-row d-sm-flex align-items-sm-center" style="margin-top: 10px;">
+                <div class="col d-sm-flex align-items-sm-center">
+                    <label style="width: 84px;margin-right: 20px;">Telefone</label>
+                    <input type="text" class="form-control" style="width: 424px;" required maxlength="14" name="telefone" asp-for="Telefone"/>
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-top: 10px;">
+                <div class="col d-sm-flex align-items-sm-center">
+                    <label style="width: 84px;margin-right: 20px;">Logradouro</label>
+                    <input type="text" class="form-control" style="width: 424px;" maxlength="50" name="logradouro" asp-for="Logradouro"/>
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-top: 10px;">
+                <div class="col d-sm-flex align-items-sm-center">
+                    <label style="width: 84px;margin-right: 20px;">Número</label>
+                    <input type="text" class="form-control" style="width: 424px;" maxlength="10" name="numero" asp-for="Numero"/>
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-top: 10px;">
+                <div class="col d-sm-flex align-items-sm-center">
+                    <label style="width: 84px;margin-right: 20px;">Bairro</label>
+                    <input type="text" class="form-control" style="width: 424px;" maxlength="50" name="bairro" asp-for="Bairro"/>
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-top: 10px;">
+                <div class="col d-sm-flex align-items-sm-center">
+                    <label style="width: 84px;margin-right: 20px;">Cidade</label>
+                    <input type="text" class="form-control" style="width: 424px;" maxlength="50" name="cidade" asp-for="Cidade" />
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-top: 10px;">
+                <div class="col">
+                    <a asp-action="Index" class="btn btn-secondary float-right">Voltar</a>
+                    <button class="btn btn-primary float-right" type="submit" style="margin-right: 10px;">Salvar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
